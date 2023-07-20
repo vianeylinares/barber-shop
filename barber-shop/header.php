@@ -39,6 +39,7 @@ TemplateMo 585 Barber Shop
 https://templatemo.com/tm-585-barber-shop
 
 -->
+        <?php wp_head(); ?>
     </head>
     
     <body>
