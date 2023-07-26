@@ -20,25 +20,6 @@
 
         <title>Gentlemen's Barber Shop - HTML CSS Template</title>
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
-
-        <link href="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/style.css" rel="stylesheet">
-<!--
-
-TemplateMo 585 Barber Shop
-
-https://templatemo.com/tm-585-barber-shop
-
--->
         <?php wp_head(); ?>
     </head>
     
