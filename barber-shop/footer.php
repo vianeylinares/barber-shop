@@ -62,11 +62,6 @@
                 </footer>
             </div>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/js/jquery.min.js"></script>
-        <script src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/js/bootstrap.min.js"></script>
-        <script src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/js/click-scroll.js"></script>
-        <script src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/js/custom.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>
