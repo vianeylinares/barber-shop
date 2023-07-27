@@ -8,6 +8,8 @@
  * @package Barber Shop
  */
 
+require_once get_template_directory() . '/inc/customizer.php';
+
 function barber_shop_scripts(){
 
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap', array(), null );
