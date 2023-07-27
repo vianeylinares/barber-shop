@@ -15,7 +15,7 @@
 
 <?php get_header(); ?>
                 
-                <div class="col-md-8 ms-sm-auto col-lg-9 p-0">
+                
                     <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
                             <div class="container">
