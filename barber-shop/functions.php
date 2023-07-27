@@ -34,6 +34,14 @@ function barber_shop_config(){
 
     add_theme_support( 'title-tag' );
 
+    add_theme_support( 'custom-logo', array(
+            'height'    => 91,
+            'width'     => 204,
+            'flex-height'    => true,
+            'flex-width'   => true,
+        )
+    );
+
 }
 add_action( 'after_setup_theme', 'barber_shop_config', 0 );
 
@@ -67,3 +75,15 @@ if( ! function_exists( 'wp_body_open' ) ){
     }
 
 }
+
+
+function barber_shop_logo_class(){
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $image_array = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    $html = '<img src="' . $image_array[0] . '" class="logo-image img-fluid" align="">';
+
+    return $html;
+
+}
+add_filter( 'get_custom_logo', 'barber_shop_logo_class' );
