@@ -32,6 +32,8 @@ function barber_shop_config(){
 		)
 	);
 
+    add_theme_support( 'title-tag' );
+
 }
 add_action( 'after_setup_theme', 'barber_shop_config', 0 );
 

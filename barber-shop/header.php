@@ -18,8 +18,6 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Gentlemen's Barber Shop - HTML CSS Template</title>
-
         <?php wp_head(); ?>
     </head>
     
