@@ -39,26 +39,19 @@
                             <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/templatemo-barber-logo.png" class="logo-image img-fluid" align="">
                         </a>
 
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
-                            </li>
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location'    => 'barber_shop_main_menu',
+                                'depth'             => 1,
+                                'container'         => 'ul',
+                                'container_class'   => '',
+                                'container_id'      => '',
+                                'menu_class'        => 'nav flex-column',
+                                'add_li_class'      => 'nav-item',
+                                'add_anchor_class'  => 'nav-link click-scroll'
+                                )
+                            );
+                        ?>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">Our Story</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Services</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Price List</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                            </li>
-                        </ul>
                     </div>
                 </nav>

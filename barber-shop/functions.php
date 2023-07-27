@@ -22,3 +22,37 @@ function barber_shop_scripts(){
 
 }
 add_action( 'wp_enqueue_scripts', 'barber_shop_scripts' );
+
+
+function barber_shop_config(){
+
+	register_nav_menus(
+		array(
+			'barber_shop_main_menu' => 'Barber Shop Main Menu'
+		)
+	);
+
+}
+add_action( 'after_setup_theme', 'barber_shop_config', 0 );
+
+
+function barber_shop_menu_add_class_on_li($classes, $item, $args) {
+
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
+
+}
+add_filter('nav_menu_css_class', 'barber_shop_menu_add_class_on_li', 1, 3);
+
+
+function barber_shop_menu_add_class_on_a($classes, $item, $args) {
+
+    if(isset($args->add_anchor_class)) {
+        $classes['class'] = $args->add_anchor_class;
+    }
+    return $classes;
+
+}
+add_filter('nav_menu_link_attributes', 'barber_shop_menu_add_class_on_a', 1, 3);
