@@ -56,3 +56,12 @@ function barber_shop_menu_add_class_on_a($classes, $item, $args) {
 
 }
 add_filter('nav_menu_link_attributes', 'barber_shop_menu_add_class_on_a', 1, 3);
+
+
+if( ! function_exists( 'wp_body_open' ) ){
+
+    function wp_body_open(){
+        do_action( 'wp_body_open' );
+    }
+
+}
