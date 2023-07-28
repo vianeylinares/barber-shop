@@ -158,6 +158,51 @@ function barber_shop_customizer( $wp_customize ){
             )
         );
 
+    /* Home Hairdressers section settings */
+
+    $wp_customize->add_section(
+        'sec_home_hairdressers', array(
+            'title'         => 'Hairdressers Settings',
+            'description'   => 'Hairdressers Section'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_hairdressers_title', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_hairdressers_title', array(
+                'label'			=> 'Hairdresser section title',
+                'description'	=> 'Hairdresser section title',
+                'section'		=> 'sec_home_hairdressers',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_hairdressers_subtitle',
+            array(
+                'type'                  => 'theme_mod',
+                'default'               => '',
+                'sanitize_callback'     => 'sanitize_textarea_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_hairdressers_subtitle',
+            array(
+                'label'             => 'Hairdressers section subtitle',
+                'description'       => 'Hairdressers section subtitle',
+                'section'           => 'sec_home_hairdressers',
+                'type'              => 'textarea'
+            )
+        );
+
 }
 add_action( 'customize_register', 'barber_shop_customizer' );
 
