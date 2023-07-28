@@ -5,28 +5,28 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
                 
-<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+<section class="hero-section d-flex justify-content-center align-items-center" id="section_1" style="background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_background' ) ); ?>');">
 
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-8 col-12">
-                    <h1 class="text-white mb-lg-3 mb-4"><strong>Barber <em>Shop</em></strong></h1>
-                    <p class="text-black">Get the most professional haircut for you</p>
+                    <h1 class="text-white mb-lg-3 mb-4"><?php echo get_theme_mod( 'set_home_top_title', 'Barber Shop' ); ?></h1>
+                    <p class="text-black"><?php echo get_theme_mod( 'set_home_top_subtitle', 'Get the most professional haircut for you' ); ?></p>
                     <br>
-                    <a class="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2">About Us</a>
+                    <a class="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2"><?php echo get_theme_mod( 'set_home_about_button', 'About Us' ); ?></a>
 
-                    <a class="btn custom-btn smoothscroll mb-2" href="#section_3">What we do</a>
+                    <a class="btn custom-btn smoothscroll mb-2" href="#section_3"><?php echo get_theme_mod( 'set_home_what_button', 'What we do' ); ?></a>
                 </div>
             </div>
         </div>
 
         <div class="custom-block d-lg-flex flex-column justify-content-center align-items-center">
-            <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.jpg" class="custom-block-image img-fluid" alt="">
+            <img src="<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_small_image' ) ); ?>" class="custom-block-image img-fluid" alt="">
 
-            <h4><strong class="text-white">Hurry Up! Get good haircut.</strong></h4>
+            <h4><strong class="text-white"><?php echo get_theme_mod( 'set_home_top_hurry_legend', 'Hurry Up! Get good haircut.' ); ?></strong></h4>
 
-            <a href="#booking-section" class="smoothscroll btn custom-btn custom-btn-italic mt-3">Book a seat</a>
+            <a href="#booking-section" class="smoothscroll btn custom-btn custom-btn-italic mt-3"><?php echo get_theme_mod( 'set_home_top_hurry_button', 'Book a seat' ); ?></a>
         </div>
 </section>
 
