@@ -203,6 +203,102 @@ function barber_shop_customizer( $wp_customize ){
             )
         );
 
+    /* Home Discount section */
+
+    $wp_customize->add_section(
+        'sec_home_discount', array(
+            'title'         => 'Discount Settings',
+            'description'   => 'Discount Section'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_discount_show', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_discount_checkbox'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_discount_show', array(
+                'label'			=> 'Show Discount section?',
+                'section'		=> 'sec_home_discount',
+                'type'			=> 'checkbox'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_discount_background_image',
+            array(
+                'type'                  => 'theme_mod',
+                'sanitize_callback'     => 'absint'
+            )
+        );
+
+        $wp_customize->add_control(
+            new WP_Customize_Media_Control(
+                $wp_customize,
+                'set_discount_background_image',
+                array(
+                    'label'     => 'Discount background image',
+                    'section'   => 'sec_home_discount',
+                    'mime_type' => 'image'
+                )
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_discount_title', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_discount_title', array(
+                'label'			=> 'Discount section title',
+                'description'	=> 'Discount section title',
+                'section'		=> 'sec_home_discount',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_discount_subtitle', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_discount_subtitle', array(
+                'label'			=> 'Discount section subtitle',
+                'description'	=> 'Discount section subtitle',
+                'section'		=> 'sec_home_discount',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_discount_promo_code', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_discount_promo_code', array(
+                'label'			=> 'Discount promo code',
+                'description'	=> 'Discount promo code',
+                'section'		=> 'sec_home_discount',
+                'type'			=> 'text'
+            )
+        );
+
 }
 add_action( 'customize_register', 'barber_shop_customizer' );
 
@@ -218,4 +314,8 @@ function sanitize_top_title( $top_title ){
 
     return $top_title;
 
+}
+
+function sanitize_discount_checkbox( $checked ){
+	return ( ( isset ( $checked ) && true == $checked ) ? true : false );
 }

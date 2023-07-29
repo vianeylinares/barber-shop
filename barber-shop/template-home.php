@@ -100,23 +100,25 @@ Template Name: Home Page
     </div>
 </section>
 
-<section class="featured-section section-padding">
-    <div class="section-overlay"></div>
+<?php if( get_theme_mod( 'set_discount_show' ) == true ){ ?>
+    <section class="featured-section section-padding" style="background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'set_discount_background_image' ) ); ?>');">
+        <div class="section-overlay"></div>
 
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <div class="col-lg-10 col-12 mx-auto">
-                <h2 class="mb-3">Get 32% Discount</h2>
+                <div class="col-lg-10 col-12 mx-auto">
+                    <h2 class="mb-3"><?php echo get_theme_mod( 'set_discount_title', 'Get 32% Discount' ); ?></h2>
 
-                <p>on every second week of the month</p>
+                    <p><?php echo get_theme_mod( 'set_discount_subtitle', 'on every second week of the month' ); ?></p>
 
-                <strong>Promo Code: BarBerMo</strong>
+                    <strong>Promo Code: <?php echo get_theme_mod( 'set_discount_promo_code', 'BarBerMo' ); ?></strong>
+                </div>
+
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
+<?php } ?>
 
 <section class="services-section section-padding" id="section_3">
     <div class="container">
