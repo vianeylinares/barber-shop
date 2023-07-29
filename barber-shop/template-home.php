@@ -42,52 +42,59 @@ Template Name: Home Page
                 </div>
             </div>
 
-                <h6 class="mb-5">Meet Babers</h6>
+            <?php
 
-                    <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
-                        <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/barber/portrait-male-hairdresser-with-scissors.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                if( class_exists( 'Barber' ) ){
 
-                        <div class="team-info d-flex align-items-center flex-wrap">
-                            <p class="mb-0">Redo</p>
+                    $args = array(
+                        'post_type' => 'barber',
+                        'post_status' => array('publish')
+                    );
 
-                            <ul class="social-icon ms-auto">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook">
-                                    </a>
-                                </li>
+                    $barbers = new WP_Query($args);
 
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram">
-                                    </a>
-                                </li>
+                    if( $barbers->have_posts() ):
+                        while( $barbers->have_posts() ): $barbers->the_post();
+                            ?>
+                                <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
+                                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="custom-block-bg-overlay-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
 
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                                    <div class="team-info d-flex align-items-center flex-wrap">
+                                        <p class="mb-0"><?php the_title(); ?></p>
 
-                    <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap mt-4 mt-lg-0 mb-5 mb-lg-0">
-                        <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/barber/portrait-mid-adult-bearded-male-barber-with-folded-arms.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                                        <ul class="social-icon ms-auto">
+                                            <?php if( get_post_meta( $post->ID, 'facebook', true ) ): ?>
+                                                <li class="social-icon-item">
+                                                    <a href="<?php echo get_post_meta( $post->ID, 'facebook', true ); ?>" class="social-icon-link bi-facebook">
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+                                            <?php if( get_post_meta( $post->ID, 'instagram', true ) ): ?>
+                                                <li class="social-icon-item">
+                                                    <a href="<?php echo get_post_meta( $post->ID, 'instagram', true ); ?>" class="social-icon-link bi-instagram">
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+                                            <?php if( get_post_meta( $post->ID, 'whatsapp', true ) ): ?>
+                                                <li class="social-icon-item">
+                                                    <a href="<?php echo get_post_meta( $post->ID, 'whatsapp', true ); ?>" class="social-icon-link bi-whatsapp">
+                                                    </a>
+                                                </li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php
+                        endwhile;
+                    else:
+                        ?>
+                        <p>Nothing to display</p>
+                        <?php
+                    endif;
 
-                        <div class="team-info d-flex align-items-center flex-wrap">
-                            <p class="mb-0">Sam</p>
+                }
 
-                            <ul class="social-icon ms-auto">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook">
-                                    </a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-            </div>
+            ?>
 
         </div>
     </div>
