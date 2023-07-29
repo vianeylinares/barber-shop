@@ -22,6 +22,9 @@ if( ! class_exists ( 'Barbers_Pole' ) ){
 
             $this->define_constants();
 
+            require_once( Barbers_Pole_PATH . 'post-types/class.barber.php' );
+            $barber = new Barber();
+
         }
 
         public function define_constants(){
