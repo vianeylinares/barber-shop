@@ -299,6 +299,100 @@ function barber_shop_customizer( $wp_customize ){
             )
         );
 
+    /* Home Contact section */
+
+    $wp_customize->add_section(
+        'sec_home_contact', array(
+            'title'         => 'Contact Settings',
+            'description'   => 'Contact Section'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_home_contact_title', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_title', array(
+                'label'			=> 'Contact section title',
+                'description'	=> 'Contact section title',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_phone', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_phone', array(
+                'label'			=> 'Contact phone',
+                'description'	=> 'Contact phone',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_email', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_email'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_email', array(
+                'label'			=> 'Contact e-email',
+                'description'	=> 'Contact e-mail',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'email'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_business_hours_title', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_business_hours_title', array(
+                'label'			=> 'Business hours title',
+                'description'	=> 'Business hours title',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_business_hours', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_business_hours', array(
+                'label'			=> 'Business hours',
+                'description'	=> 'Business hours',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
 }
 add_action( 'customize_register', 'barber_shop_customizer' );
 
