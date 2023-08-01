@@ -180,72 +180,57 @@ Template Name: Home Page
     </div>
 </section>
 
-<section class="price-list-section section-padding" id="section_4">
-    <div class="container">
-        <div class="row">
+<?php if( class_exists( 'Price' ) ){ ?>
+    <section class="price-list-section section-padding" id="section_4">
+        <div class="container">
+            <div class="row">
 
-            <div class="col-lg-8 col-12">
-                <div class="price-list-thumb-wrap">
-                    <div class="mb-4">
-                        <h2 class="mb-2">Price List</h2>
+                <div class="col-lg-8 col-12">
+                    <div class="price-list-thumb-wrap">
+                        <div class="mb-4">
+                            <h2 class="mb-2">Price List</h2>
+                        </div>
 
-                        <strong>Starting at $25</strong>
-                    </div>
+                        <?php
 
-                    <div class="price-list-thumb">
-                        <h6 class="d-flex">
-                            Haircut
-                            <span class="price-list-thumb-divider"></span>
+                            $args = array(
+                                'post_type' => 'price',
+                                'post_status' => array('publish')
+                            );
 
-                            <strong>$32.00</strong>
-                        </h6>
-                    </div>
+                            $prices = new WP_Query($args);
 
-                    <div class="price-list-thumb">
-                        <h6 class="d-flex">
-                            Beard Trim
-                            <span class="price-list-thumb-divider"></span>
+                            if( $prices->have_posts() ):
+                                while( $prices->have_posts() ): $prices->the_post();
+                                    ?>
+                                        <div class="price-list-thumb">
+                                            <h6 class="d-flex">
+                                                <?php the_title(); ?>
+                                                <span class="price-list-thumb-divider"></span>
 
-                            <strong>$26.00</strong>
-                        </h6>
-                    </div>
+                                                <strong>$<?php echo get_post_meta( $post->ID, 'price', true ); ?></strong>
+                                            </h6>
+                                        </div>
+                                    <?php
+                                endwhile;
+                            else:
+                                ?>
+                                <p>Nothing to display</p>
+                                <?php
+                            endif;
 
-                    <div class="price-list-thumb">
-                        <h6 class="d-flex">
-                            Razor Cut
-                            <span class="price-list-thumb-divider"></span>
-
-                            <strong>$36.00</strong>
-                        </h6>
-                    </div>
-
-                    <div class="price-list-thumb">
-                        <h6 class="d-flex">
-                            Shaves
-                            <span class="price-list-thumb-divider"></span>
-
-                            <strong>$30.00</strong>
-                        </h6>
-                    </div>
-
-                    <div class="price-list-thumb">
-                        <h6 class="d-flex">
-                            Styling / Color
-                            <span class="price-list-thumb-divider"></span>
-
-                            <strong>$25.00</strong>
-                        </h6>
+                        ?>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
-                <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
-            </div>
+                <div class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
+                    <img src="<?php echo home_url(); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.jpg" class="custom-block-bg-overlay-image img-fluid" alt="vintage chair">
+                </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php } ?>
 
 <section class="contact-section" id="section_5">
     <div class="section-padding section-bg">
