@@ -25,6 +25,9 @@ if( ! class_exists ( 'Barbers_Pole' ) ){
             require_once( Barbers_Pole_PATH . 'post-types/class.barber.php' );
             $barber = new Barber();
 
+            require_once( Barbers_Pole_PATH . 'post-types/class.service.php' );
+            $service = new Service();
+
         }
 
         public function define_constants(){
