@@ -17,27 +17,35 @@
                                 <h4 class="site-footer-title mb-4">Our Branches</h4>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-11">
-                                <div class="site-footer-thumb">
-                                    <strong class="mb-1">Grünberger</strong>
+                            <?php
 
-                                    <p>Grünberger Str. 31, 10245 Berlin, Germany</p>
-                                </div>
-                            </div>
+                                $args = array(
+                                    'post_type' => 'branch',
+                                    'post_status' => array('publish')
+                                );
 
-                            <div class="col-lg-4 col-md-6 col-11">
-                                <div class="site-footer-thumb">
-                                    <strong class="mb-1">Behrenstraße</strong>
+                                $branches = new WP_Query($args);
 
-                                    <p>Behrenstraße 27, 10117 Berlin, Germany</p>
-                                </div>
-                            </div>
+                                if( $branches->have_posts() ):
+                                    while( $branches->have_posts() ): $branches->the_post();
+                                        ?>
+                                            <div class="col-lg-4 col-md-6 col-11">
+                                                <div class="site-footer-thumb">
+                                                    <strong class="mb-1"><?php the_title(); ?></strong>
 
-                            <div class="col-lg-4 col-md-6 col-11">
-                                <strong class="mb-1">Weinbergsweg</strong>
+                                                    <p><?php the_content(); ?></p>
+                                                </div>
+                                            </div>
+                                        <?php
+                                    endwhile;
+                                else:
+                                    ?>
+                                    <p>Nothing to display</p>
+                                    <?php
+                                endif;
 
-                                <p>Weinbergsweg 23, 10119 Berlin, Germany</p>
-                            </div>
+                            ?>
+
                         </div>
                     </div>
 
