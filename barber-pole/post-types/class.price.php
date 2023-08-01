@@ -13,6 +13,8 @@ if( ! class_exists( 'Price' ) ){
 
         public function __construct(){
             add_action( 'init', array( $this, 'price_register_post_type' ) );
+            add_action( 'add_meta_boxes', array( $this, 'barbers_pole_price_metabox' ) );
+            add_action( 'save_post', array( $this,'barbers_pole_price_meta_save' ) );
         }
 
         // Register 'price' post type
@@ -79,6 +81,56 @@ if( ! class_exists( 'Price' ) ){
             );
 
             register_post_type( 'price', $args ); 
+
+        }
+
+        public function barbers_pole_price_metabox(){
+
+            add_meta_box(
+
+                'barbers_pole_price_metabox',
+                'Price for listing',
+                array( $this, 'barbers_pole_price_callback' ),
+                'price'
+
+            );
+
+        }
+
+        public function barbers_pole_price_callback($post){
+
+            wp_nonce_field( basename(__FILE__), 'Barbers_Pole_enable_disable_nonce' );
+
+            $price = ( get_post_meta( $post->ID, 'price', true ) ) ? esc_html( get_post_meta( $post->ID, 'price', true ) ) : "" ;
+
+            ?>
+
+            <div>
+
+                <div id="price">
+                    Price:
+                    <div>
+                        <input type="text" name="price" value="<?php echo $price; ?>" style="width: 100%; margin-bottom: 10px;" />
+                    </div>
+                </div>
+
+            </div>
+
+            <?php
+
+        }
+
+        public function barbers_pole_price_meta_save($post_id){
+
+            $is_autosave = wp_is_post_autosave($post_id);
+            $is_revision = wp_is_post_revision($post_id);
+            $is_valid_nonce = ( isset($_POST['Barbers_Pole_enable_disable_nonce'] ) && wp_verify_nonce( $_POST['Barbers_Pole_enable_disable_nonce'], basename(__FILE__)) ) ? "true" : "false";
+
+            if($is_autosave || $is_revision || !$is_valid_nonce){
+                return;
+            }
+
+            update_post_meta( $post_id, 'price', $_POST['price'] );
 
         }
         
