@@ -120,65 +120,50 @@ Template Name: Home Page
     </section>
 <?php } ?>
 
-<section class="services-section section-padding" id="section_3">
-    <div class="container">
-        <div class="row">
+<?php if( class_exists( 'Service' ) ){ ?>
+    <section class="services-section section-padding" id="section_3">
+        <div class="container">
+            <div class="row">
 
-            <div class="col-lg-12 col-12">
-                <h2 class="mb-5">Services</h2>
-            </div>
-
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="services-thumb">
-                    <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/services/woman-cutting-hair-man-salon.jpg" class="services-image img-fluid" alt="">
-
-                    <div class="services-info d-flex align-items-end">
-                        <h4 class="mb-0">Hair cut</h4>
-
-                        <strong class="services-thumb-price">$36.00</strong>
-                    </div>
+                <div class="col-lg-12 col-12">
+                    <h2 class="mb-5">Services</h2>
                 </div>
+
+                <?php
+
+                    $args = array(
+                        'post_type' => 'service',
+                        'post_status' => array('publish')
+                    );
+
+                    $services = new WP_Query($args);
+
+                    if( $services->have_posts() ):
+                        while( $services->have_posts() ): $services->the_post();
+                            ?>
+                                <div class="col-lg-6 col-12 mb-4">
+                                    <div class="services-thumb">
+                                        <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="services-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
+
+                                        <div class="services-info d-flex align-items-end">
+                                            <h4 class="mb-0"><?php the_title(); ?></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php
+                        endwhile;
+                    else:
+                        ?>
+                        <p>Nothing to display</p>
+                        <?php
+                    endif;
+
+                ?>
+
             </div>
-
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="services-thumb">
-                    <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/services/hairdresser-grooming-their-client.jpg" class="services-image img-fluid" alt="">
-
-                    <div class="services-info d-flex align-items-end">
-                        <h4 class="mb-0">Washing</h4>
-
-                        <strong class="services-thumb-price">$25.00</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                <div class="services-thumb">
-                    <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/services/hairdresser-grooming-client.jpg" class="services-image img-fluid" alt="">
-
-                    <div class="services-info d-flex align-items-end">
-                        <h4 class="mb-0">Shaves</h4>
-
-                        <strong class="services-thumb-price">$30.00</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-12">
-                <div class="services-thumb">
-                    <img src="https://devbucket.xyz/barbershop/wp-content/themes/barber-shop/inc/images/services/boy-getting-haircut-salon-front-view.jpg" class="services-image img-fluid" alt="">
-
-                    <div class="services-info d-flex align-items-end">
-                        <h4 class="mb-0">Kids</h4>
-
-                        <strong class="services-thumb-price">$25.00</strong>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
+<?php } ?>
 
 <section class="booking-section section-padding" id="booking-section">
     <div class="container">
