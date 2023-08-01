@@ -31,6 +31,9 @@ if( ! class_exists ( 'Barbers_Pole' ) ){
             require_once( Barbers_Pole_PATH . 'post-types/class.price.php' );
             $price = new Price();
 
+            require_once( Barbers_Pole_PATH . 'post-types/class.branch.php' );
+            $branch = new Branch();
+
         }
 
         public function define_constants(){
