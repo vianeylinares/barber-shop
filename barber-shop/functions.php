@@ -91,3 +91,21 @@ function barber_shop_logo_class(){
 
 }
 add_filter( 'get_custom_logo', 'barber_shop_logo_class' );
+
+
+function barber_shop_sidebars(){
+
+    register_sidebar(
+        array(
+            'name'              => 'Booking sidebar',
+            'id'                => 'sidebar-booking',
+            'description'       => 'This is the Booking sidebar at Home. You can add widgets here.',
+            'before_widget'     => '',
+            'after_widget'      => '',
+            'before_title'      => '',
+            'after_title'       => ''
+        )
+    );
+
+}
+add_action( 'widgets_init', 'barber_shop_sidebars' );
