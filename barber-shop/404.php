@@ -1,10 +1,8 @@
 <?php
 /**
- * The 404 template file
+ * The template for displaying 404 pages (not found)
  *
- * This is the 404 template file in a WordPress theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package Barber Shop
  */
