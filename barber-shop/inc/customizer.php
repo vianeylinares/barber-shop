@@ -393,6 +393,91 @@ function barber_shop_customizer( $wp_customize ){
             )
         );
 
+        $wp_customize->add_setting(
+            'set_home_contact_facebook', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_url'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_facebook', array(
+                'label'			=> 'Facebook',
+                'description'	=> 'Facebook',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_twitter', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_url'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_twitter', array(
+                'label'			=> 'Twitter',
+                'description'	=> 'Twitter',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_instagram', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_url'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_instagram', array(
+                'label'			=> 'Instagram',
+                'description'	=> 'Instagram',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_youtube', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_url'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_youtube', array(
+                'label'			=> 'YouTube',
+                'description'	=> 'YouTube',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
+        $wp_customize->add_setting(
+            'set_home_contact_whatsapp', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_url'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_home_contact_whatsapp', array(
+                'label'			=> 'WhatsApp',
+                'description'	=> 'WhatsApp',
+                'section'		=> 'sec_home_contact',
+                'type'			=> 'text'
+            )
+        );
+
 }
 add_action( 'customize_register', 'barber_shop_customizer' );
 

@@ -264,30 +264,41 @@ Template Name: Home Page
                     </p>
 
                     <ul class="social-icon">
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook">
-                            </a>
-                        </li>
+                        <?php if( get_theme_mod( 'set_home_contact_facebook' ) != "" ){ ?>
+                            <li class="social-icon-item">
+                                <a href="<?php echo get_theme_mod( 'set_home_contact_facebook' ); ?>" class="social-icon-link bi-facebook">
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter">
-                            </a>
-                        </li>
+                        <?php if( get_theme_mod( 'set_home_contact_twitter' ) != "" ){ ?>
+                            <li class="social-icon-item">
+                                <a href="<?php echo get_theme_mod( 'set_home_contact_twitter' ); ?>" class="social-icon-link bi-twitter">
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram">
-                            </a>
-                        </li>
+                        <?php if( get_theme_mod( 'set_home_contact_instagram' ) != "" ){ ?>
+                            <li class="social-icon-item">
+                                <a href="<?php echo get_theme_mod( 'set_home_contact_instagram' ); ?>" class="social-icon-link bi-instagram">
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube">
-                            </a>
-                        </li>
+                        <?php if( get_theme_mod( 'set_home_contact_youtube' ) != "" ){ ?>
+                            <li class="social-icon-item">
+                                <a href="<?php echo get_theme_mod( 'set_home_contact_youtube' ); ?>" class="social-icon-link bi-youtube">
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-whatsapp">
-                            </a>
-                        </li>
+                        <?php if( get_theme_mod( 'set_home_contact_whatsapp' ) != "" ){ ?>
+                            <li class="social-icon-item">
+                                <a href="<?php echo get_theme_mod( 'set_home_contact_whatsapp' ); ?>" class="social-icon-link bi-whatsapp">
+                                </a>
+                            </li>
+                        <?php } ?>
+
                     </ul>
                 </div>
 
