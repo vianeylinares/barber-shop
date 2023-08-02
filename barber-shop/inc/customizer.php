@@ -478,6 +478,32 @@ function barber_shop_customizer( $wp_customize ){
             )
         );
 
+    /* Copyright section */
+
+    $wp_customize->add_section(
+        'sec_copyright', array(
+            'title'         => 'Copyright Settings',
+            'description'   => 'Copyright Section'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_copyright_legend', array(
+                'type'					=> 'theme_mod',
+                'default'				=> '',
+                'sanitize_callback'		=> 'sanitize_text_field'
+            )
+        );
+
+        $wp_customize->add_control(
+            'set_copyright_legend', array(
+                'label'			=> 'Copyright legend',
+                'description'	=> 'Copyright legend',
+                'section'		=> 'sec_copyright',
+                'type'			=> 'text'
+            )
+        );
+
 }
 add_action( 'customize_register', 'barber_shop_customizer' );
 

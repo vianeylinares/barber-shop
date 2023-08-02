@@ -56,8 +56,9 @@
                             <div class="row align-items-center">
 
                                 <div class="col-lg-8 col-12 mt-4">
-                                    <p class="copyright-text mb-0">Copyright © 2036 Barber Shop 
-                                    - Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a></p>
+                                    <p class="copyright-text mb-0">
+                                        <?php echo get_theme_mod( 'set_copyright_legend', 'Copyright © 2036 Barber Shop' ); ?>
+                                    </p>
                                 </div>
 
                                 <div class="col-lg-2 col-md-3 col-3 mt-lg-4 ms-auto">
