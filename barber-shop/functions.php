@@ -34,6 +34,9 @@ function barber_shop_config(){
 		)
 	);
 
+    $textdomain = 'barber-shop';
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
+
     add_theme_support( 'title-tag' );
 
     add_theme_support( 'custom-logo', array(

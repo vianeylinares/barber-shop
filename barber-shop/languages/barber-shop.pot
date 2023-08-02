@@ -1,0 +1,326 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"Barber Shop Pot v1.0.0\n"
+"POT-Creation-Date: "
+"2023-08-02 16:02-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your "
+"Name <you@example.com>\n"
+"Language-Team: \n"
+"Report-Msgid-Bugs-To: "
+"Translator Name "
+"<translations@example."
+"com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/"
+"plain; charset=UTF-8\n"
+"Content-Transfer-"
+"Encoding: 8bit\n"
+"Plural-Forms: "
+"nplurals=2; plural=n != "
+"1;\n"
+"X-Textdomain-Support: "
+"yesX-Generator: Poedit "
+"1.6.4\n"
+"X-Poedit-SourceCharset: "
+"UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;esc_html_e;"
+"esc_html_x:1,2c;"
+"esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;"
+"_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;"
+"__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Language: en_US\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-"
+"SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"Unfortunately, the page "
+"you tried to reach does "
+"not exist on this site."
+msgstr ""
+
+#: footer.php:18
+msgid "Our Branches"
+msgstr ""
+
+#: footer.php:44
+#: index.php:34
+#: template-home.php:91
+#: template-home.php:157
+#: template-home.php:218
+msgid "Nothing to display"
+msgstr ""
+
+#: footer.php:60
+msgid ""
+"Copyright © 2036 Barber "
+"Shop"
+msgstr ""
+
+#: functions.php:33
+msgid ""
+"Barber Shop Main Menu"
+msgstr ""
+
+#: functions.php:100
+msgid "Booking sidebar"
+msgstr ""
+
+#: functions.php:102
+msgid ""
+"This is the Booking "
+"sidebar at Home. You can "
+"add widgets here."
+msgstr ""
+
+#: inc/customizer.php:14
+msgid "Home Top Settings"
+msgstr ""
+
+#: inc/customizer.php:15
+msgid "Home Top Section"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "Home top background"
+msgstr ""
+
+#: inc/customizer.php:49
+#: inc/customizer.php:50
+msgid "Home top title"
+msgstr ""
+
+#: inc/customizer.php:66
+#: inc/customizer.php:67
+msgid "Home top subtitle"
+msgstr ""
+
+#: inc/customizer.php:83
+#: inc/customizer.php:84
+msgid ""
+"Home \"about\" button"
+msgstr ""
+
+#: inc/customizer.php:100
+#: inc/customizer.php:101
+msgid ""
+"Home \"what\" button"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid ""
+"Home top small image"
+msgstr ""
+
+#: inc/customizer.php:137
+#: inc/customizer.php:138
+msgid ""
+"Home top hurry title"
+msgstr ""
+
+#: inc/customizer.php:154
+#: inc/customizer.php:155
+msgid ""
+"Home top \"book\" button"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid ""
+"Hairdressers Settings"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid ""
+"Hairdressers Section"
+msgstr ""
+
+#: inc/customizer.php:180
+#: inc/customizer.php:181
+msgid ""
+"Hairdresser section title"
+msgstr ""
+
+#: inc/customizer.php:199
+#: inc/customizer.php:200
+msgid ""
+"Hairdressers section "
+"subtitle"
+msgstr ""
+
+#: inc/customizer.php:210
+msgid "Discount Settings"
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Discount Section"
+msgstr ""
+
+#: inc/customizer.php:225
+msgid ""
+"Show Discount section?"
+msgstr ""
+
+#: inc/customizer.php:244
+msgid ""
+"Discount background image"
+msgstr ""
+
+#: inc/customizer.php:261
+#: inc/customizer.php:262
+msgid ""
+"Discount section title"
+msgstr ""
+
+#: inc/customizer.php:278
+#: inc/customizer.php:279
+msgid ""
+"Discount section subtitle"
+msgstr ""
+
+#: inc/customizer.php:295
+#: inc/customizer.php:296
+msgid "Discount promo code"
+msgstr ""
+
+#: inc/customizer.php:306
+msgid "Contact Settings"
+msgstr ""
+
+#: inc/customizer.php:307
+msgid "Contact Section"
+msgstr ""
+
+#: inc/customizer.php:321
+#: inc/customizer.php:322
+msgid ""
+"Contact section title"
+msgstr ""
+
+#: inc/customizer.php:338
+#: inc/customizer.php:339
+msgid "Contact phone"
+msgstr ""
+
+#: inc/customizer.php:355
+msgid "Contact e-email"
+msgstr ""
+
+#: inc/customizer.php:356
+msgid "Contact e-mail"
+msgstr ""
+
+#: inc/customizer.php:372
+#: inc/customizer.php:373
+msgid ""
+"Business hours title"
+msgstr ""
+
+#: inc/customizer.php:389
+#: inc/customizer.php:390
+msgid "Business hours"
+msgstr ""
+
+#: inc/customizer.php:485
+msgid "Copyright Settings"
+msgstr ""
+
+#: inc/customizer.php:486
+msgid "Copyright Section"
+msgstr ""
+
+#: inc/customizer.php:500
+#: inc/customizer.php:501
+msgid "Copyright legend"
+msgstr ""
+
+#: template-home.php:15
+msgid ""
+"Get the most "
+"professional haircut for "
+"you"
+msgstr ""
+
+#: template-home.php:17
+msgid "About Us"
+msgstr ""
+
+#: template-home.php:19
+msgid "What we do"
+msgstr ""
+
+#: template-home.php:27
+msgid ""
+"Hurry Up! Get good "
+"haircut."
+msgstr ""
+
+#: template-home.php:29
+msgid "Book a seat"
+msgstr ""
+
+#: template-home.php:38
+msgid "Best hairdressers"
+msgstr ""
+
+#: template-home.php:41
+msgid ""
+"Gentlemen's Barber Shop "
+"is new Bootstrap v5 HTML "
+"CSS template by "
+"TemplateMo for everyone. "
+"There is a sidebar menu "
+"to navigate the one-page "
+"layout. You can feel "
+"free to adapt this "
+"template for your "
+"business."
+msgstr ""
+
+#: template-home.php:111
+msgid "Get 32% Discount"
+msgstr ""
+
+#: template-home.php:113
+msgid ""
+"on every second week of "
+"the month"
+msgstr ""
+
+#: template-home.php:129
+msgid "Services"
+msgstr ""
+
+#: template-home.php:191
+msgid "Price List"
+msgstr ""
+
+#: template-home.php:241
+msgid "Say hello"
+msgstr ""
+
+#: template-home.php:310
+msgid "Open Daily"
+msgstr ""
+
+#: template-home.php:312
+msgid "10:00 AM - 8:00 PM"
+msgstr ""
