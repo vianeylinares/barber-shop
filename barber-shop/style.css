@@ -365,7 +365,7 @@ https://templatemo.com/tm-585-barber-shop
     HERO        
   -----------------------------------------*/
   .hero-section {
-    background-image: url('../images/client-doing-hair-cut-barber-shop-salon.jpg');
+    /*background-image: url('../images/client-doing-hair-cut-barber-shop-salon.jpg');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -467,7 +467,7 @@ https://templatemo.com/tm-585-barber-shop
     FEATURED               
   -----------------------------------------*/
   .featured-section {
-    background-image: url('../images/barber-customer-giving-high-five.jpg');
+    /*background-image: url('../images/barber-customer-giving-high-five.jpg');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -583,7 +583,7 @@ https://templatemo.com/tm-585-barber-shop
     BOOKING               
   -----------------------------------------*/
   .booking-section {
-    background-image: url('../images/vintage-chair-barbershop.jpg');
+    /*background-image: url('../images/vintage-chair-barbershop.jpg');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
