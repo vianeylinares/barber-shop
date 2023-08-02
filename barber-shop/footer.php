@@ -10,44 +10,46 @@
 ?>
 
                 <footer class="site-footer">
-                    <div class="container">
-                        <div class="row">
+                    <?php if( class_exists( 'Branch' ) ){ ?>
+                        <div class="container">
+                            <div class="row">
 
-                            <div class="col-lg-12 col-12">
-                                <h4 class="site-footer-title mb-4">Our Branches</h4>
-                            </div>
+                                <div class="col-lg-12 col-12">
+                                    <h4 class="site-footer-title mb-4">Our Branches</h4>
+                                </div>
 
-                            <?php
+                                <?php
 
-                                $args = array(
-                                    'post_type' => 'branch',
-                                    'post_status' => array('publish')
-                                );
+                                    $args = array(
+                                        'post_type' => 'branch',
+                                        'post_status' => array('publish')
+                                    );
 
-                                $branches = new WP_Query($args);
+                                    $branches = new WP_Query($args);
 
-                                if( $branches->have_posts() ):
-                                    while( $branches->have_posts() ): $branches->the_post();
-                                        ?>
-                                            <div class="col-lg-4 col-md-6 col-11">
-                                                <div class="site-footer-thumb">
-                                                    <strong class="mb-1"><?php the_title(); ?></strong>
+                                    if( $branches->have_posts() ):
+                                        while( $branches->have_posts() ): $branches->the_post();
+                                            ?>
+                                                <div class="col-lg-4 col-md-6 col-11">
+                                                    <div class="site-footer-thumb">
+                                                        <strong class="mb-1"><?php the_title(); ?></strong>
 
-                                                    <p><?php the_content(); ?></p>
+                                                        <p><?php the_content(); ?></p>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            <?php
+                                        endwhile;
+                                    else:
+                                        ?>
+                                        <p>Nothing to display</p>
                                         <?php
-                                    endwhile;
-                                else:
-                                    ?>
-                                    <p>Nothing to display</p>
-                                    <?php
-                                endif;
+                                    endif;
 
-                            ?>
+                                ?>
 
+                            </div>
                         </div>
-                    </div>
+                    <?php } ?>
 
                     <div class="site-footer-bottom">
                         <div class="container">
