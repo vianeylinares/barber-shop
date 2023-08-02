@@ -33,7 +33,7 @@
                 <nav id="sidebarMenu" class="col-md-4 col-lg-3 d-md-block sidebar collapse p-0">
 
                     <div class="position-sticky sidebar-sticky d-flex flex-column justify-content-center align-items-center">
-                        <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <?php if( has_custom_logo() ): ?>
                                 <?php the_custom_logo(); ?>
                             <?php else: ?>

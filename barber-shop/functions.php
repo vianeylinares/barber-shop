@@ -30,7 +30,7 @@ function barber_shop_config(){
 
 	register_nav_menus(
 		array(
-			'barber_shop_main_menu' => 'Barber Shop Main Menu'
+			'barber_shop_main_menu' => esc_html__( 'Barber Shop Main Menu', 'barber-shop' )
 		)
 	);
 
@@ -97,9 +97,9 @@ function barber_shop_sidebars(){
 
     register_sidebar(
         array(
-            'name'              => 'Booking sidebar',
+            'name'              => esc_html__( 'Booking sidebar', 'barber-shop' ),
             'id'                => 'sidebar-booking',
-            'description'       => 'This is the Booking sidebar at Home. You can add widgets here.',
+            'description'       => esc_html__( 'This is the Booking sidebar at Home. You can add widgets here.', 'barber-shop' ),
             'before_widget'     => '',
             'after_widget'      => '',
             'before_title'      => '',

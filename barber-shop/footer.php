@@ -15,7 +15,7 @@
                             <div class="row">
 
                                 <div class="col-lg-12 col-12">
-                                    <h4 class="site-footer-title mb-4">Our Branches</h4>
+                                    <h4 class="site-footer-title mb-4"><?php esc_html_e( 'Our Branches', 'barber-shop' ); ?></h4>
                                 </div>
 
                                 <?php
@@ -41,7 +41,7 @@
                                         endwhile;
                                     else:
                                         ?>
-                                        <p>Nothing to display</p>
+                                        <p><?php esc_html_e( 'Nothing to display', 'barber-shop' ); ?></p>
                                         <?php
                                     endif;
 
@@ -57,7 +57,7 @@
 
                                 <div class="col-lg-8 col-12 mt-4">
                                     <p class="copyright-text mb-0">
-                                        <?php echo get_theme_mod( 'set_copyright_legend', 'Copyright © 2036 Barber Shop' ); ?>
+                                        <?php echo esc_html( get_theme_mod( 'set_copyright_legend', __( 'Copyright © 2036 Barber Shop', 'barber-shop' ) ) ); ?>
                                     </p>
                                 </div>
 

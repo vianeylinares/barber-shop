@@ -15,10 +15,10 @@
     <div class="container">
         <div class="row" style="display: block; margin-top: 100px; margin-bottom: 100px;">
             <h1>
-                Page not found
+                <?php esc_html_e( 'Page not found', 'barber-shop' ); ?>
             </h1>
             <p>
-                Unfortunately, the page you tried to reach does not exist on this site.
+                <?php esc_html_e( 'Unfortunately, the page you tried to reach does not exist on this site.', 'barber-shop' ); ?>
             </p>
         </div>
     </div>

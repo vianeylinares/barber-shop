@@ -11,8 +11,8 @@ function barber_shop_customizer( $wp_customize ){
 
     $wp_customize->add_section(
         'sec_home_top', array(
-            'title'         => 'Home Top Settings',
-            'description'   => 'Home Top Section'
+            'title'         => __( 'Home Top Settings', 'barber-shop' ),
+            'description'   => __( 'Home Top Section', 'barber-shop' ),
         )
     );
 
@@ -29,7 +29,7 @@ function barber_shop_customizer( $wp_customize ){
                 $wp_customize,
                 'set_home_top_background',
                 array(
-                    'label'     => 'Home top background',
+                    'label'     => __( 'Home top background', 'barber-shop' ),
                     'section'   => 'sec_home_top',
                     'mime_type' => 'image'
                 )
@@ -46,8 +46,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_top_title', array(
-                'label'			=> 'Home top title',
-                'description'	=> 'Home top title',
+                'label'			=> __( 'Home top title', 'barber-shop' ),
+                'description'	=> __( 'Home top title', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -63,8 +63,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_top_subtitle', array(
-                'label'			=> 'Home top subtitle',
-                'description'	=> 'Home top subtitle',
+                'label'			=> __( 'Home top subtitle', 'barber-shop' ),
+                'description'	=> __( 'Home top subtitle', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -80,8 +80,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_about_button', array(
-                'label'			=> 'Home "about" button',
-                'description'	=> 'Home "about" button',
+                'label'			=> __( 'Home "about" button', 'barber-shop' ),
+                'description'	=> __( 'Home "about" button', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -97,8 +97,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_what_button', array(
-                'label'			=> 'Home "what" button',
-                'description'	=> 'Home "what" button',
+                'label'			=> __( 'Home "what" button', 'barber-shop' ),
+                'description'	=> __( 'Home "what" button', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -117,7 +117,7 @@ function barber_shop_customizer( $wp_customize ){
                 $wp_customize,
                 'set_home_top_small_image',
                 array(
-                    'label'     => 'Home top small image',
+                    'label'     => __( 'Home top small image', 'barber-shop' ),
                     'section'   => 'sec_home_top',
                     'mime_type' => 'image'
                 )
@@ -134,8 +134,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_top_hurry_legend', array(
-                'label'			=> 'Home top hurry title',
-                'description'	=> 'Home top hurry title',
+                'label'			=> __( 'Home top hurry title', 'barber-shop' ),
+                'description'	=> __( 'Home top hurry title', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -151,8 +151,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_top_hurry_button', array(
-                'label'			=> 'Home top "book" button',
-                'description'	=> 'Home top "book" button',
+                'label'			=> __( 'Home top "book" button', 'barber-shop' ),
+                'description'	=> __( 'Home top "book" button', 'barber-shop' ),
                 'section'		=> 'sec_home_top',
                 'type'			=> 'text'
             )
@@ -162,8 +162,8 @@ function barber_shop_customizer( $wp_customize ){
 
     $wp_customize->add_section(
         'sec_home_hairdressers', array(
-            'title'         => 'Hairdressers Settings',
-            'description'   => 'Hairdressers Section'
+            'title'         => __( 'Hairdressers Settings', 'barber-shop' ),
+            'description'   => __( 'Hairdressers Section', 'barber-shop' ),
         )
     );
 
@@ -177,8 +177,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_hairdressers_title', array(
-                'label'			=> 'Hairdresser section title',
-                'description'	=> 'Hairdresser section title',
+                'label'			=> __( 'Hairdresser section title', 'barber-shop' ),
+                'description'	=> __( 'Hairdresser section title', 'barber-shop' ),
                 'section'		=> 'sec_home_hairdressers',
                 'type'			=> 'text'
             )
@@ -196,8 +196,8 @@ function barber_shop_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_hairdressers_subtitle',
             array(
-                'label'             => 'Hairdressers section subtitle',
-                'description'       => 'Hairdressers section subtitle',
+                'label'             => __( 'Hairdressers section subtitle', 'barber-shop' ),
+                'description'       => __( 'Hairdressers section subtitle', 'barber-shop' ),
                 'section'           => 'sec_home_hairdressers',
                 'type'              => 'textarea'
             )
@@ -207,8 +207,8 @@ function barber_shop_customizer( $wp_customize ){
 
     $wp_customize->add_section(
         'sec_home_discount', array(
-            'title'         => 'Discount Settings',
-            'description'   => 'Discount Section'
+            'title'         => __( 'Discount Settings', 'barber-shop' ),
+            'description'   => __( 'Discount Section', 'barber-shop' )
         )
     );
 
@@ -222,7 +222,7 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_discount_show', array(
-                'label'			=> 'Show Discount section?',
+                'label'			=> __( 'Show Discount section?', 'barber-shop' ),
                 'section'		=> 'sec_home_discount',
                 'type'			=> 'checkbox'
             )
@@ -241,7 +241,7 @@ function barber_shop_customizer( $wp_customize ){
                 $wp_customize,
                 'set_discount_background_image',
                 array(
-                    'label'     => 'Discount background image',
+                    'label'     => __( 'Discount background image', 'barber-shop' ),
                     'section'   => 'sec_home_discount',
                     'mime_type' => 'image'
                 )
@@ -258,8 +258,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_discount_title', array(
-                'label'			=> 'Discount section title',
-                'description'	=> 'Discount section title',
+                'label'			=> __( 'Discount section title', 'barber-shop' ),
+                'description'	=> __( 'Discount section title', 'barber-shop' ),
                 'section'		=> 'sec_home_discount',
                 'type'			=> 'text'
             )
@@ -275,8 +275,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_discount_subtitle', array(
-                'label'			=> 'Discount section subtitle',
-                'description'	=> 'Discount section subtitle',
+                'label'			=> __( 'Discount section subtitle', 'barber-shop' ),
+                'description'	=> __( 'Discount section subtitle', 'barber-shop' ),
                 'section'		=> 'sec_home_discount',
                 'type'			=> 'text'
             )
@@ -292,8 +292,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_discount_promo_code', array(
-                'label'			=> 'Discount promo code',
-                'description'	=> 'Discount promo code',
+                'label'			=> __( 'Discount promo code', 'barber-shop' ),
+                'description'	=> __( 'Discount promo code', 'barber-shop' ),
                 'section'		=> 'sec_home_discount',
                 'type'			=> 'text'
             )
@@ -303,8 +303,8 @@ function barber_shop_customizer( $wp_customize ){
 
     $wp_customize->add_section(
         'sec_home_contact', array(
-            'title'         => 'Contact Settings',
-            'description'   => 'Contact Section'
+            'title'         => __( 'Contact Settings', 'barber-shop' ),
+            'description'   => __( 'Contact Section', 'barber-shop' )
         )
     );
 
@@ -318,8 +318,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_contact_title', array(
-                'label'			=> 'Contact section title',
-                'description'	=> 'Contact section title',
+                'label'			=> __( 'Contact section title', 'barber-shop' ),
+                'description'	=> __( 'Contact section title', 'barber-shop' ),
                 'section'		=> 'sec_home_contact',
                 'type'			=> 'text'
             )
@@ -335,8 +335,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_contact_phone', array(
-                'label'			=> 'Contact phone',
-                'description'	=> 'Contact phone',
+                'label'			=> __( 'Contact phone', 'barber-shop' ),
+                'description'	=> __( 'Contact phone', 'barber-shop' ),
                 'section'		=> 'sec_home_contact',
                 'type'			=> 'text'
             )
@@ -352,8 +352,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_contact_email', array(
-                'label'			=> 'Contact e-email',
-                'description'	=> 'Contact e-mail',
+                'label'			=> __( 'Contact e-email', 'barber-shop' ),
+                'description'	=> __( 'Contact e-mail', 'barber-shop' ),
                 'section'		=> 'sec_home_contact',
                 'type'			=> 'email'
             )
@@ -369,8 +369,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_contact_business_hours_title', array(
-                'label'			=> 'Business hours title',
-                'description'	=> 'Business hours title',
+                'label'			=> __( 'Business hours title', 'barber-shop' ),
+                'description'	=> __( 'Business hours title', 'barber-shop' ),
                 'section'		=> 'sec_home_contact',
                 'type'			=> 'text'
             )
@@ -386,8 +386,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_home_contact_business_hours', array(
-                'label'			=> 'Business hours',
-                'description'	=> 'Business hours',
+                'label'			=> __( 'Business hours', 'barber-shop' ),
+                'description'	=> __( 'Business hours', 'barber-shop' ),
                 'section'		=> 'sec_home_contact',
                 'type'			=> 'text'
             )
@@ -482,8 +482,8 @@ function barber_shop_customizer( $wp_customize ){
 
     $wp_customize->add_section(
         'sec_copyright', array(
-            'title'         => 'Copyright Settings',
-            'description'   => 'Copyright Section'
+            'title'         => __( 'Copyright Settings', 'barber-shop' ),
+            'description'   => __( 'Copyright Section', 'barber-shop' ),
         )
     );
 
@@ -497,8 +497,8 @@ function barber_shop_customizer( $wp_customize ){
 
         $wp_customize->add_control(
             'set_copyright_legend', array(
-                'label'			=> 'Copyright legend',
-                'description'	=> 'Copyright legend',
+                'label'			=> __( 'Copyright legend', 'barber-shop' ),
+                'description'	=> __( 'Copyright legend', 'barber-shop' ),
                 'section'		=> 'sec_copyright',
                 'type'			=> 'text'
             )

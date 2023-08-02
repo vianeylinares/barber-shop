@@ -31,7 +31,7 @@
                     endwhile;
                 else:
                     ?>
-                    <p>Nothing to display</p>
+                    <p><?php esc_html_e( 'Nothing to display', 'barber-shop' ); ?></p>
                     <?php
                 endif;
             ?>
