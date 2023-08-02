@@ -45,7 +45,7 @@ if( ! class_exists( 'Branch' ) ){
                     'public' => true,
                     'publicly_queryable' => true,
                     'exclude_from_search' => false,
-                    'show_in_nav_menus' => true,
+                    'show_in_nav_menus' => false,
                     'show_ui' => true,
                     'show_in_menu' => true,
                     'show_in_admin_bar' => true,
