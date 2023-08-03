@@ -9,3 +9,14 @@ Home page top banner, barbers introduction, discount and contact information sec
 Book a Seat section is handled by a sidebar.
 
 Barbers, Services, Price list and Branches are handled by custom post-types and metaboxes defined within the 'Barber's pole' plugin.
+
+### Other details
+
+The plugin was developed with:
+<ul>
+<li>WordPress</li>
+<li>PHP/OOP</li>
+<li>HTML</li>
+<li>JavaScript/jQuery</li>
+<li>CSS</li>
+</ul>
