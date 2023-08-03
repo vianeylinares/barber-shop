@@ -12,7 +12,7 @@ Barbers, Services, Price list and Branches are handled by custom post-types and 
 
 ### Other details
 
-The plugin was developed with:
+The theme and plugin were developed with:
 <ul>
 <li>WordPress</li>
 <li>PHP/OOP</li>
