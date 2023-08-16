@@ -1,9 +1,9 @@
 <?php
 /*
  * Plugin name: Barber's Pole
- * Plugin URI: 
+ * Plugin URI: https://vianeylinares.com/portfolio/barbershop/
  * Description: Barber's activities
- * Author: VL
+ * Author: Vianey Linares
  * Version: 1.0.0
  * License: Open
  * 
