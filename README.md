@@ -20,3 +20,7 @@ The theme and plugin were developed with:
 <li>JavaScript/jQuery</li>
 <li>CSS</li>
 </ul>
+
+The 'BarberShop - HTML5 Template' can be seen online [here](https://vianeylinares.com/references/barbershop/).
+
+The ‘BarberShop - WP theme’ demo is [here](https://vianeylinares.com/portfolio/barbershop/).
