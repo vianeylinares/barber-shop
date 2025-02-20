@@ -23,4 +23,4 @@ The theme and plugin were developed with:
 
 The 'BarberShop - HTML5 Template' can be seen online [here](https://vianeylinares.com/references/barbershop/).
 
-The ‘BarberShop - WP theme’ demo is [here](https://vianeylinares.com/portfolio/barbershop/).
+The ‘BarberShop - WP theme’ demo is [here](https://devbucket.xyz/portfolio/barbershop/).
