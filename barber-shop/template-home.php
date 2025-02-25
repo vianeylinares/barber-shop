@@ -165,7 +165,7 @@ Template Name: Home Page
     </section>
 <?php } ?>
 
-<section class="booking-section section-padding" id="booking-section" style="background-image: url('<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.jpg');">
+<section class="booking-section section-padding" id="booking-section" style="background-image: url('<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.webp');">
     <div class="container">
         <div class="row">
 
@@ -224,7 +224,7 @@ Template Name: Home Page
                 </div>
 
                 <div class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
-                    <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.jpg" class="custom-block-bg-overlay-image img-fluid" alt="vintage chair">
+                    <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.webp" class="custom-block-bg-overlay-image img-fluid" alt="vintage chair">
                 </div>
 
             </div>
