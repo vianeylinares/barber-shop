@@ -37,6 +37,26 @@ function barber_shop_customizer( $wp_customize ){
         );
 
         $wp_customize->add_setting(
+            'set_home_top_background_mobile',
+            array(
+                'type'                  => 'theme_mod',
+                'sanitize_callback'     => 'absint'
+            )
+        );
+
+        $wp_customize->add_control(
+            new WP_Customize_Media_Control(
+                $wp_customize,
+                'set_home_top_background_mobile',
+                array(
+                    'label'     => __( 'Home top background mobile', 'barber-shop' ),
+                    'section'   => 'sec_home_top',
+                    'mime_type' => 'image'
+                )
+            )
+        );
+
+        $wp_customize->add_setting(
             'set_home_top_title', array(
                 'type'					=> 'theme_mod',
                 'default'				=> '',

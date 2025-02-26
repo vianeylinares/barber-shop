@@ -118,7 +118,29 @@ function barber_shop_images_preload(){
     ?>
 
         <link rel="preload" fetchpriority="high" as="image" href="<?php echo home_url(); ?>/wp-content/uploads/2025/02/client-doing-hair-cut-barber-shop-salon.webp" />
+        <link rel="preload" fetchpriority="high" as="image" href="<?php echo home_url(); ?>/wp-content/uploads/2025/02/client-doing-hair-cut-barber-shop-salon-mobile.webp" />
+        <link rel="preload" fetchpriority="high" as="image" href="<?php echo home_url(); ?>/wp-content/uploads/2025/02/barber-customer-giving-high-five.webp" />
+        <link rel="preload" fetchpriority="high" as="image" href="<?php echo home_url(); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.webp" />
 
     <?php
 }
 add_action( "wp_head", "barber_shop_images_preload" );
+
+
+function barber_shop_css(){
+    ?>
+
+        <style type="text/css">
+            .hero-section{
+                background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_background' ) ); ?>');
+            }
+            @media(max-width: 767px){
+                .hero-section{
+                    background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_background_mobile' ) ); ?>');
+                }
+            }
+        </style>
+
+    <?php
+}
+add_action( "wp_head", "barber_shop_css" );

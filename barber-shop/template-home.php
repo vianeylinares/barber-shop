@@ -5,7 +5,7 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
                 
-<section class="hero-section d-flex justify-content-center align-items-center" id="section_1" style="background-image: url('<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_background' ) ); ?>');">
+<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
         <div class="container">
             <div class="row">
