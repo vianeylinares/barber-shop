@@ -88,7 +88,7 @@ function barber_shop_logo_class(){
 
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     $image_array = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-    $html = '<img src="' . $image_array[0] . '" class="logo-image img-fluid" align="">';
+    $html = '<img src="' . $image_array[0] . '" class="logo-image img-fluid" align="" width="' . $image_array[1] . '" height="' . $image_array[2] . '">';
 
     return $html;
 

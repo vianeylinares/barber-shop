@@ -22,7 +22,10 @@ Template Name: Home Page
         </div>
 
         <div class="custom-block d-lg-flex flex-column justify-content-center align-items-center">
-            <img src="<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_small_image' ) ); ?>" class="custom-block-image img-fluid" alt="">
+            <?php
+                $image_attributes = wp_get_attachment_image_src( get_theme_mod( 'set_home_top_small_image' ), 'full' );
+            ?>
+            <img src="<?php echo wp_get_attachment_url( get_theme_mod( 'set_home_top_small_image' ) ); ?>" class="custom-block-image img-fluid" alt="<?php echo get_post_meta( get_theme_mod( 'set_home_top_small_image' ), '_wp_attachment_image_alt', true ); ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
 
             <h4><strong class="text-white"><?php echo esc_html( get_theme_mod( 'set_home_top_hurry_legend', __( 'Hurry Up! Get good haircut.' ) ) ); ?></strong></h4>
 
@@ -57,7 +60,10 @@ Template Name: Home Page
                         while( $barbers->have_posts() ): $barbers->the_post();
                             ?>
                                 <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
-                                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="custom-block-bg-overlay-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
+                                    <?php
+                                        $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+                                    ?>
+                                    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="custom-block-bg-overlay-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
 
                                     <div class="team-info d-flex align-items-center flex-wrap">
                                         <p class="mb-0"><?php the_title(); ?></p>
@@ -143,7 +149,10 @@ Template Name: Home Page
                             ?>
                                 <div class="col-lg-6 col-12 mb-4">
                                     <div class="services-thumb">
-                                        <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="services-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>">
+                                        <?php
+                                            $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+                                        ?>
+                                        <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>" class="services-image img-fluid" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>">
 
                                         <div class="services-info d-flex align-items-end">
                                             <h4 class="mb-0"><?php the_title(); ?></h4>
@@ -224,7 +233,7 @@ Template Name: Home Page
                 </div>
 
                 <div class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
-                    <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.webp" class="custom-block-bg-overlay-image img-fluid" alt="vintage chair">
+                    <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/barber-shop/inc/images/vintage-chair-barbershop.webp" class="custom-block-bg-overlay-image img-fluid" alt="vintage chair" width="600" height="400">
                 </div>
 
             </div>
